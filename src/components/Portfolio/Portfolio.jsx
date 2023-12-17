@@ -72,6 +72,23 @@ const projects = [{
    id: 17
  }];
 
+ const filters = [{
+  name: "All",
+  id: 1
+ },
+ {
+  name: "Websites",
+  id: 2
+ },
+ {
+  name: "Flayers",
+  id: 3
+ },
+ {
+  name: "Business Cards",
+  id: 4
+ }]
+
  export const Portfolio = () => {
    let selected = "All";
    const initialState = projects;
@@ -90,7 +107,7 @@ const projects = [{
 
    return (
    <div className="widget">
-      <Toolbar filters={["All", "Websites", "Flayers", "Business Cards"]} selected={selected} filterItems={filterItems}/>
+      <Toolbar filters={filters} selected={selected} filterItems={filterItems}/>
       <ProjectList items={items}/>
    </div>
    )
